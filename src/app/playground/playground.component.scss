@@ -1,16 +1,16 @@
 .top {
-    background-color: beige;
+    background-color: black;
     height: 80vh;
 }
 
 .middle {
-    background-color: bisque;
+    background-color: rgba(0, 0, 0, 0.434);
     height: 50vh;
     display: flex;
 }
 
 .bottom {
-    background-color: lightgray;
+    background-color: black;
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -30,4 +30,11 @@
     opacity: 0;
     position: absolute;
     left: -100px;
+}
+
+
+h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
+    opacity: 0;
 }

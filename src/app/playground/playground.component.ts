@@ -2,6 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
 
 @Component({
   selector: 'app-playground',
@@ -16,11 +17,27 @@ export class PlaygroundComponent implements AfterViewInit  {
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
     if (isPlatformBrowser(this.platformId)) {  
+      gsap.to(".lucio", {
+        x: "52vw",
+        y: "15vh",
+        scale: 2.5,
+        opacity: 1,
+        color: "blue",
+        letterSpacing: "3px",
+        scrollTrigger: {
+          trigger: ".lucio",
+          start: "top 80%",
+          end: "top 70%",
+          scrub: 1,
+        }
+      });
       gsap.to(".gsaplogo", {
         x: "52vw",
         y: "15vh",
         scale: 2.5,
         opacity: 1,
+        backgroundColor: "green",
+        color: "red",
         scrollTrigger: {
           trigger: ".gsaplogo",
           start: "top 80%",
