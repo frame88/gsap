@@ -1,5 +1,5 @@
 .top {
-    background-color: black;
+    background-color: rgb(131, 131, 131);
     height: 80vh;
 }
 
@@ -35,6 +35,9 @@
 
 h1 {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: red;
-    opacity: 0;
+    color: black;
+    opacity: 1;
+    margin-top: 0;
 }
+
+.class2 { background-color: red;}

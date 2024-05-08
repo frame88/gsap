@@ -15,21 +15,18 @@ export class PlaygroundComponent implements AfterViewInit  {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, TextPlugin);
     if (isPlatformBrowser(this.platformId)) {  
       gsap.to(".lucio", {
-        x: "52vw",
-        y: "15vh",
-        scale: 2.5,
-        opacity: 1,
-        color: "blue",
-        letterSpacing: "3px",
-        scrollTrigger: {
-          trigger: ".lucio",
-          start: "top 80%",
-          end: "top 70%",
-          scrub: 1,
-        }
+        duration: 5,
+        text: {
+          value: "Your new text",
+          newClass: "class2"
+        },
+      });
+      gsap.to(".lucio", {
+        duration: 1,
+        paddingLeft: "2rem",
       });
       gsap.to(".gsaplogo", {
         x: "52vw",
